@@ -19,8 +19,8 @@ function App() {
         <LeftPane />
         <MainContent>
           <Routes>
+
             <Route path="/" element={<About />} />
-            <Route path="/about" element={<About />} />
             <Route path="/education" element={<Education />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/skills" element={<Skills />} />
