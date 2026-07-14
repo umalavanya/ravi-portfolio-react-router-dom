@@ -17,7 +17,7 @@ const LeftPane = () => {
   const activeSection = sections.includes(currentPath) ? currentPath : 'about';
 
   const handleNavigation = (section) => {
-    navigate(`/${section === 'about' ? '' : section}`);
+    navigate(`/${section === 'about' ? 'about' : section}`);
     setIsMobileMenuOpen(false);
   };
 

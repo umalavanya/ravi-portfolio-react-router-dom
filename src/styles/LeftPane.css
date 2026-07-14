@@ -65,7 +65,12 @@
 }
 
 .profile-pic:hover {
-    transform: scale(1.05);
+    transform: scale(1.25);
+    border-color: white;
+}
+
+.profile-info:hover {
+    transform: scale(1.25);
     border-color: white;
 }
 
@@ -140,7 +145,7 @@
 
 /* Mobile Toggle Button */
 .mobile-menu-toggle {
-    display: none;
+    display:flex;
     background: none;
     border: none;
     color: white;
@@ -148,6 +153,7 @@
     cursor: pointer;
     padding: 5px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
 
 .mobile-menu-toggle:hover {

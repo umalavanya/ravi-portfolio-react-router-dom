@@ -179,9 +179,6 @@ const About = () => {
             </div>
           </div>
 
-
-
-
         </div>
 
         {/* Main Content */}
