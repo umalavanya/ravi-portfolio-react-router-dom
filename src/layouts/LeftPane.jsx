@@ -10,7 +10,7 @@ const LeftPane = () => {
   const navRef = useRef(null);
   const toggleRef = useRef(null);
 
-  const sections = ['about', 'education', 'experience', 'skills', 'awards', 'publications', 'talks', 'pictures'];
+  const sections = ['','about', 'education', 'experience', 'skills', 'awards', 'publications', 'talks', 'pictures'];
   
   // Get current section from URL
   const currentPath = location.pathname.replace('/', '') || 'about';
