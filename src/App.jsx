@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import LeftPane from './layouts/LeftPane';
 import MainContent from './layouts/MainContent';
 import './styles/App.css';
@@ -19,8 +19,9 @@ function App() {
         <LeftPane />
         <MainContent>
           <Routes>
-
-            <Route path="/" element={<About />} />
+            
+            <Route path="/" element={<Navigate to='/about' replace/>} />
+            <Route path="/about" element={<About />} />
             <Route path="/education" element={<Education />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/skills" element={<Skills />} />
