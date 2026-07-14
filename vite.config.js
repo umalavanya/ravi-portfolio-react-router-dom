@@ -12,6 +12,6 @@ export default defineConfig(({ command, mode }) => {
   return {
     plugins: [react()],
     // for Production (GitHub Pages) -  project name, for Development '/'
-    base: isProduction ? '/ravi-portfolio-react-router-dom/' : '/',
+    base: isProduction ? "/ravi-portfolio-react-router-dom" : '/',
   }
 }) ;

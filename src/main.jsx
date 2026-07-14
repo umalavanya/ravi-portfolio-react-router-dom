@@ -8,7 +8,7 @@ import './styles/LeftPane.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basemane='./ravi-portfolio-react-router-dom'>
+    <BrowserRouter basemane="/ravi-portfolio-react-router-dom">
       <App />
     </BrowserRouter>
   </React.StrictMode>
