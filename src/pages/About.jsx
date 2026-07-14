@@ -179,27 +179,9 @@ const About = () => {
             </div>
           </div>
 
-          <div className="connect-section">
-            <h3>
-              <span className="connect-icon">🤝</span>
-              Let's Connect
-            </h3>
-            <p>Discuss collaborations in advanced materials research!</p>
-            <div className="social-icons-about">
-              <a className="social-icon-about" href="#!" title="LinkedIn">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a className="social-icon-about" href="#!" title="GitHub">
-                <i className="fab fa-github"></i>
-              </a>
-              <a className="social-icon-about" href="https://www.facebook.com/ravisri.phy" title="Facebook">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a className="social-icon-about" href="mailto:ravisri.phy@gmail.com" title="Email">
-                <i className="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
+
+
+
         </div>
 
         {/* Main Content */}
