@@ -195,7 +195,7 @@ const About = () => {
               <a className="social-icon-about" href="https://www.facebook.com/ravisri.phy" title="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a className="social-icon-about" href="mailto:example@example.com" title="Email">
+              <a className="social-icon-about" href="mailto:ravisri.phy@gmail.com" title="Email">
                 <i className="fas fa-envelope"></i>
               </a>
             </div>

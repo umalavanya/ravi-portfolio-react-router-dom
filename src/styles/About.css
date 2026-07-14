@@ -439,8 +439,9 @@
 /* Research Philosophy */
 .research-philosophy {
     margin-top: 2rem;
+    margin-bottom: 2rem ;
     padding-top: 2rem;
-    border-top: 2px dashed #f0e6df;
+    border-bottom: 2px dashed #f0e6df;
     animation: fadeIn 0.5s ease;
 }
 
