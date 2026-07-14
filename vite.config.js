@@ -11,7 +11,7 @@ export default defineConfig(({ command, mode }) => {
   
   return {
     plugins: [react()],
-    // Production (GitHub Pages) కోసం project name, Development కోసం '/'
+    // for Production (GitHub Pages) -  project name, for Development '/'
     base: isProduction ? '/ravi-portfolio-react-router-dom/' : '/',
   }
 }) ;

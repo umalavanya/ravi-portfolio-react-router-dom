@@ -229,24 +229,6 @@ const About = () => {
                 </p>
               </div>
 
-              {/* Expertise Grid */}
-              <div className="expertise-grid">
-                {expertisePoints.map((expertise, index) => (
-                  <div key={index} className="expertise-card" onClick={() => setShowExpertise(!showExpertise)}>
-                    <div className="expertise-card-header">
-                      <div className="expertise-icon-card">{expertise.icon}</div>
-                      <h4>{expertise.title}</h4>
-                    </div>
-                    <p className="expertise-description">{expertise.description}</p>
-                    <div className="expertise-tags">
-                      {expertise.details.map((detail, idx) => (
-                        <span key={idx} className="expertise-detail-tag">{detail}</span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
               {/* Research Philosophy */}
               {showPhilosophy && (
                 <div className="research-philosophy">
@@ -290,6 +272,26 @@ const About = () => {
                   </div>
                 </div>
               )}
+
+              {/* Expertise Grid */}
+              <div className="expertise-grid">
+                {expertisePoints.map((expertise, index) => (
+                  <div key={index} className="expertise-card" onClick={() => setShowExpertise(!showExpertise)}>
+                    <div className="expertise-card-header">
+                      <div className="expertise-icon-card">{expertise.icon}</div>
+                      <h4>{expertise.title}</h4>
+                    </div>
+                    <p className="expertise-description">{expertise.description}</p>
+                    <div className="expertise-tags">
+                      {expertise.details.map((detail, idx) => (
+                        <span key={idx} className="expertise-detail-tag">{detail}</span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              
             </div>
           </div>
 
