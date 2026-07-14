@@ -1,0 +1,348 @@
+:root {
+    --primary-color: #bd5d38;
+    --primary-light: #d68a6b;
+    --primary-dark: #9a4a2c;
+    --secondary-color: #f8f1ec;
+    --text-color: #333;
+    --light-text: #666;
+
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+        "Noto Sans", "Liberation Sans", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    /* Base font sizes */
+    --font-size-base: 16px;
+    --font-size-small: 0.875rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.5rem;
+    --font-size-4xl: 3rem;
+}
+
+/* Responsive typography using clamp() */
+html {
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--bs-font-sans-serif);
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: justify;
+    overflow-x: hidden;
+    font-size: var(--font-size-medium);
+}
+
+/* Responsive heading sizes */
+h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    line-height: 1.4;
+}
+
+h4 {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    line-height: 1.5;
+}
+
+p,
+li,
+.item-description {
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    line-height: 1.6;
+}
+
+/* Rest of your existing CSS... */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+.nav-link,
+.fact-card,
+.expertise-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth section transitions */
+.content-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth hover effects */
+.nav-link {
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    transform: translateX(5px);
+    background-color: var(--primary-light);
+}
+
+/* Smooth card animations */
+.fact-card,
+.expertise-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fact-card:hover {
+    transform: translateX(8px) scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.expertise-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(189, 93, 56, 0.15);
+}
+
+/* Smooth button transitions */
+.section-btn,
+.submit-btn,
+.progress-btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.section-btn:hover,
+.submit-btn:hover,
+.progress-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(189, 93, 56, 0.3);
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Education, Experience, Awards styles */
+.education-item,
+.experience-item,
+.award-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.education-item:hover,
+.experience-item:hover,
+.award-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-title {
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.1em);
+}
+
+.item-date {
+    color: var(--light-text);
+    font-style: italic;
+    font-size: clamp(0.8rem, 1vw, 0.95rem);
+}
+
+.item-description {
+    margin-top: 5px;
+}
+
+ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.publication {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #ccc;
+    transition: all 0.3s ease;
+}
+
+.publication:hover {
+    padding-left: 10px;
+    border-bottom-color: var(--primary-color);
+}
+
+/* Contact Form Styles */
+.contact-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: clamp(20px, 3vw, 30px);
+    max-width: 600px;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+}
+
+.contact-box:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: clamp(0.875rem, 1vw, 1rem);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: clamp(8px, 1vw, 12px);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--bs-font-sans-serif);
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(189, 93, 56, 0.1);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: clamp(10px, 1.5vw, 14px) clamp(16px, 2vw, 20px);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(189, 93, 56, 0.3);
+}
+
+.form-response {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    animation: fadeIn 0.3s ease;
+}
+
+.form-response.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.form-response.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* Responsive Typography - Additional Media Queries */
+@media (max-width: 1200px) {
+    :root {
+        --font-size-base: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --font-size-base: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --font-size-base: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    :root {
+        --font-size-base: 11px;
+    }
+}

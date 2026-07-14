@@ -1,0 +1,93 @@
+/* Base styles from previous CSS */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.left-pane {
+    width: 20%;
+    background-color: #bd5d38;
+    padding: clamp(15px, 3vw, 30px) clamp(10px, 2vw, 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-content {
+    width: 80%;
+    padding: clamp(5px, 1vw, 15px);
+    background-color: #f8f1ec;
+    min-height: 100vh;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Smooth page transitions */
+.main-content>* {
+    animation: fadeSlideIn 0.4s ease-in-out;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scroll for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .left-pane {
+        width: 25%;
+    }
+
+    .main-content {
+        width: 75%;
+    }
+}
+
+@media (max-width: 992px) {
+    .left-pane {
+        width: 30%;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .left-pane,
+    .main-content {
+        width: 100%;
+    }
+
+    .left-pane {
+        height: fit-content;
+        flex-direction: row;
+        padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 20px);
+        position: relative;
+        top: auto;
+        height: auto;
+    }
+}

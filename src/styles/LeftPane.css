@@ -1,0 +1,298 @@
+/* Base Styles */
+.left-pane {
+    --primary-color: #bd5d38;
+    --primary-light: #d68a6b;
+    --primary-dark: #874126;
+    --text-color: #fff;
+
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    gap: 15px;
+    padding-top: 20%;
+    transition: all 0.3s ease;
+}
+
+.profile-info {
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.profile-info h4 {
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Desktop Profile Section */
+.desktop-profile {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: clamp(120px, 15vw, 180px);
+    height: clamp(160px, 20vw, 250px);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    border-color: var(--primary-light);
+    border-width: clamp(0.2rem, 0.4vw, 0.4rem);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    border-color: white;
+}
+
+/* Navigation Links - Desktop */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link {
+    padding: clamp(4px, 1vw, 8%) clamp(8px, 1.5vw, 15px);
+    background: none;
+    border: none;
+    color: white;
+    text-align: justify;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: fit-content;
+    position: relative;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: var(--primary-light);
+    transform: translateX(5px);
+}
+
+.nav-link.active {
+    background-color: var(--primary-dark);
+    transform: translateX(5px);
+}
+
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link.scrolling {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+/* Mobile Header */
+.mobile-header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Mobile Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-toggle:hover {
+    transform: rotate(90deg);
+}
+
+.mobile-menu-toggle.active {
+    transform: rotate(90deg);
+}
+
+/* Responsive Styles (Below 800px) */
+@media (max-width: 800px) {
+
+    /* Smooth Transition for Left Pane */
+    .left-pane {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Smooth Transition for Navigation Links */
+    .nav-links {
+        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .nav-links.mobile-open {
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    /* Smooth Transition for Profile Picture */
+    .profile-pic {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .left-pane {
+        height: fit-content;
+        flex-direction: row;
+        padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 20px);
+    }
+
+    /* Hide Desktop Profile */
+    .desktop-profile {
+        display: none;
+    }
+
+    /* Show Mobile Header */
+    .mobile-header {
+        display: flex;
+    }
+
+    /* Header Container */
+    .header-container {
+        flex: 0 0 70%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    /* Header Toggle */
+    .header-toggle {
+        display: block;
+        flex: 0 0 30%;
+    }
+
+    /* Profile Section */
+    .profile-section {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .profile-pic {
+        width: clamp(40px, 8vw, 60px);
+        height: clamp(55px, 11vw, 80px);
+        margin: 0;
+        border-color: var(--primary-light);
+        border-width: 0.2rem;
+    }
+
+    .profile-pic:hover {
+        transform: scale(1.1);
+    }
+
+    .profile-info h4 {
+        font-size: clamp(0.7rem, 2vw, 0.9rem);
+        margin: 0;
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+        display: block;
+        align-self: right;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    /* Navigation Links - Mobile */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        padding: 10px 20px;
+        align-items: right;
+        z-index: 1000;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.mobile-open {
+        max-height: 500px;
+        opacity: 1;
+        overflow-y: auto;
+    }
+
+    .nav-link {
+        width: fit-content;
+        margin: 0;
+        align-self: flex-end;
+        padding: clamp(6px, 1.5vw, 10px) clamp(10px, 2vw, 15px);
+        text-align: right;
+        font-size: clamp(0.75rem, 2vw, 0.9rem);
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+}
+
+/* Additional responsive adjustments for very small screens */
+@media (max-width: 400px) {
+    .profile-info h4 {
+        font-size: 0.6rem;
+    }
+
+    .nav-link {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+}
