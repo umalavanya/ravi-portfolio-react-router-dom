@@ -21,6 +21,7 @@ function App() {
           <Routes>
             
             <Route path="/" element={<Navigate to='/about' replace/>} />
+            
             <Route path="/about" element={<About />} />
             <Route path="/education" element={<Education />} />
             <Route path="/experience" element={<Experience />} />
