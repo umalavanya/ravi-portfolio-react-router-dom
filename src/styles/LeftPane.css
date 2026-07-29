@@ -69,7 +69,7 @@
     border-color: white;
 }
 
-.profile-info:hover {
+.profile-info:hover .profile-pic {
     transform: scale(1.25);
     border-color: white;
 }
@@ -143,9 +143,9 @@
     margin-bottom: 15px;
 }
 
-/* Mobile Toggle Button */
+/* Mobile Toggle Button - Hidden on desktop */
 .mobile-menu-toggle {
-    display:flex;
+    display: none;
     background: none;
     border: none;
     color: white;
@@ -153,7 +153,6 @@
     cursor: pointer;
     padding: 5px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-   
 }
 
 .mobile-menu-toggle:hover {
@@ -166,36 +165,50 @@
 
 /* Responsive Styles (Below 800px) */
 @media (max-width: 800px) {
-
-    /* Smooth Transition for Left Pane */
     .left-pane {
+        position: relative;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        height: fit-content;
+        flex-direction: row;
+        padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 20px);
+        overflow: visible;
+        /* Changed from default to prevent clipping */
     }
 
-    /* Smooth Transition for Navigation Links */
+    /* Navigation Links - Mobile */
     .nav-links {
-        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-            background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        /* Keep as flex */
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-end;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        padding: 10px 20px;
+        z-index: 1000;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         max-height: 0;
         opacity: 0;
         overflow: hidden;
+        /* Hidden when closed */
+        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+        /* Prevent interaction when hidden */
     }
 
     .nav-links.mobile-open {
         max-height: 500px;
         opacity: 1;
-    }
-
-    /* Smooth Transition for Profile Picture */
-    .profile-pic {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .left-pane {
-        height: fit-content;
-        flex-direction: row;
-        padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 20px);
+        overflow-y: auto;
+        pointer-events: auto;
+        /* Allow interaction when open */
+        padding: 15px 20px;
+        /* Add padding when open */
     }
 
     /* Hide Desktop Profile */
@@ -208,7 +221,14 @@
         display: flex;
     }
 
-    /* Header Container */
+    /* Show Toggle Button on Mobile */
+    .mobile-menu-toggle {
+        display: flex;
+        align-self: center;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
     .header-container {
         flex: 0 0 70%;
         flex-direction: row;
@@ -217,13 +237,6 @@
         margin: 0;
     }
 
-    /* Header Toggle */
-    .header-toggle {
-        display: block;
-        flex: 0 0 30%;
-    }
-
-    /* Profile Section */
     .profile-section {
         flex-direction: row;
         align-items: center;
@@ -250,44 +263,26 @@
         margin: 0;
     }
 
-    /* Mobile Menu Toggle */
-    .mobile-menu-toggle {
-        display: block;
-        align-self: right;
-        margin-left: auto;
-        margin-right: 0;
-    }
-
-    /* Navigation Links - Mobile */
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        background-color: var(--primary-color);
-        padding: 10px 20px;
-        align-items: right;
-        z-index: 1000;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-links.mobile-open {
-        max-height: 500px;
-        opacity: 1;
-        overflow-y: auto;
-    }
-
     .nav-link {
-        width: fit-content;
+        width: 100%;
+        /* Take full width for better touch targets */
         margin: 0;
         align-self: flex-end;
-        padding: clamp(6px, 1.5vw, 10px) clamp(10px, 2vw, 15px);
+        padding: clamp(8px, 1.5vw, 12px) clamp(10px, 2vw, 15px);
         text-align: right;
         font-size: clamp(0.75rem, 2vw, 0.9rem);
+        border-radius: 5px;
     }
 
     .nav-link::after {
         display: none;
+    }
+
+    /* Add hover/active state for mobile */
+    .nav-link:hover,
+    .nav-link:active {
+        background-color: var(--primary-light);
+        transform: translateX(5px);
     }
 }
 
@@ -299,6 +294,6 @@
 
     .nav-link {
         font-size: 0.7rem;
-        padding: 5px 10px;
+        padding: 8px 10px;
     }
 }
