@@ -219,22 +219,30 @@
     /* Show Mobile Header */
     .mobile-header {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
-    /* Show Toggle Button on Mobile */
+    /* Show Toggle Button on Mobile - Fixed alignment */
     .mobile-menu-toggle {
         display: flex;
-        align-self: center;
+        align-items: center;
+        justify-content: center;
         margin-left: auto;
+        /* Pushes to the right end */
         margin-right: 0;
+        flex-shrink: 0;
+        /* Prevents shrinking */
     }
 
     .header-container {
         flex: 0 0 70%;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         margin: 0;
+        width: 100%;
     }
 
     .profile-section {
@@ -244,6 +252,8 @@
         margin: 0;
         padding: 0;
         gap: 10px;
+        flex: 1;
+        /* Takes available space */
     }
 
     .profile-pic {

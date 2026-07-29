@@ -111,21 +111,32 @@ const About = () => {
               <span className="facts-icon">⚡</span>
               Quick Facts
             </h3>
+
+            
             
             <div className="fact-cards">
+
               <div className="fact-card">
-                <div className="fact-icon">🎓</div>
+                <div className="fact-icon">🧲</div>
                 <div className="fact-content">
                   <div className="fact-title">Post Doc</div>
-                  <div className="fact-detail">Carnegie Mellon University</div>
+                  <div className="fact-detail">Cornell University, U.S.A</div>
                 </div>
               </div>
 
               <div className="fact-card">
-                <div className="fact-icon">🎓</div>
+                <div className="fact-icon">🔬</div>
                 <div className="fact-content">
                   <div className="fact-title">Post Doc</div>
-                  <div className="fact-detail">Indian Institute of Science</div>
+                  <div className="fact-detail">Carnegie Mellon University, U.S.A</div>
+                </div>
+              </div>
+
+              <div className="fact-card">
+                <div className="fact-icon">⇅</div>
+                <div className="fact-content">
+                  <div className="fact-title">Post Doc</div>
+                  <div className="fact-detail">Indian Institute of Science, India</div>
                 </div>
               </div>
 
@@ -133,17 +144,12 @@ const About = () => {
                 <div className="fact-icon">🎓</div>
                 <div className="fact-content">
                   <div className="fact-title">PhD Physics</div>
-                  <div className="fact-detail">University of Hyderabad</div>
+                  <div className="fact-detail">University of Hyderabad, India</div>
                 </div>
+
               </div>
               
-              <div className="fact-card">
-                <div className="fact-icon">🏆</div>
-                <div className="fact-content">
-                  <div className="fact-title">10+ Awards</div>
-                  <div className="fact-detail">National & International</div>
-                </div>
-              </div>
+             
               
               <div className="fact-card">
                 <div className="fact-icon">📄</div>
@@ -185,6 +191,8 @@ const About = () => {
         <div className="about-main">
           {/* About Me Section */}
           <div className="about-me-section">
+
+
             <div className="section-header">
               <h2>
                 <span className="section-icon">👨‍🔬</span>
@@ -329,29 +337,7 @@ const About = () => {
                     </ul>
                   </div>
 
-                  <div className="interest-stats">
-                    <div className="stat-interest">
-                      <div className="stat-icon">📈</div>
-                      <div className="stat-content">
-                        <div className="stat-value">7+ years</div>
-                        <div className="stat-label">Research Experience</div>
-                      </div>
-                    </div>
-                    <div className="stat-interest">
-                      <div className="stat-icon">📊</div>
-                      <div className="stat-content">
-                        <div className="stat-value">13+ papers</div>
-                        <div className="stat-label">Published Research</div>
-                      </div>
-                    </div>
-                    <div className="stat-interest">
-                      <div className="stat-icon">🎯</div>
-                      <div className="stat-content">
-                        <div className="stat-value">Next-Gen</div>
-                        <div className="stat-label">Memory Technologies</div>
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -380,7 +366,33 @@ const About = () => {
                 >
                   Next ▶
                 </button>
+
+                
               </div>
+
+              <div className="interest-stats">
+                    <div className="stat-interest">
+                      <div className="stat-icon">📈</div>
+                      <div className="stat-content">
+                        <div className="stat-value">7+ years</div>
+                        <div className="stat-label">Research Experience</div>
+                      </div>
+                    </div>
+                    <div className="stat-interest">
+                      <div className="stat-icon">📊</div>
+                      <div className="stat-content">
+                        <div className="stat-value">13+ papers</div>
+                        <div className="stat-label">Published Research</div>
+                      </div>
+                    </div>
+                    <div className="stat-interest">
+                      <div className="stat-icon">🎯</div>
+                      <div className="stat-content">
+                        <div className="stat-value">Next-Gen</div>
+                        <div className="stat-label">Memory Technologies</div>
+                      </div>
+                    </div>
+                  </div>
             </div>
           </div>
 
