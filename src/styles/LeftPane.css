@@ -170,79 +170,27 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         height: fit-content;
         flex-direction: row;
+        align-items: center;
+        /* Changed from space-between */
+        justify-content: space-between;
+        /* Added to push items apart */
+        width: 100%;
         padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 20px);
         overflow: visible;
-        /* Changed from default to prevent clipping */
-    }
-
-    /* Navigation Links - Mobile */
-    .nav-links {
-        display: flex;
-        /* Keep as flex */
-        flex-direction: column;
-        gap: 5px;
-        align-items: flex-end;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        background-color: var(--primary-color);
-        padding: 10px 20px;
-        z-index: 1000;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        /* Hidden when closed */
-        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-            padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        pointer-events: none;
-        /* Prevent interaction when hidden */
-    }
-
-    .nav-links.mobile-open {
-        max-height: 500px;
-        opacity: 1;
-        overflow-y: auto;
-        pointer-events: auto;
-        /* Allow interaction when open */
-        padding: 15px 20px;
-        /* Add padding when open */
-    }
-
-    /* Hide Desktop Profile */
-    .desktop-profile {
-        display: none;
-    }
-
-    /* Show Mobile Header */
-    .mobile-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    /* Show Toggle Button on Mobile - Fixed alignment */
-    .mobile-menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: auto;
-        /* Pushes to the right end */
-        margin-right: 0;
-        flex-shrink: 0;
-        /* Prevents shrinking */
     }
 
     .header-container {
-        flex: 0 0 70%;
+        flex: 1;
+        /* Changed from 0 0 70% */
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
+        /* Changed from space-between */
         align-items: center;
         margin: 0;
-        width: 100%;
+        width: auto;
+        /* Changed from 100% */
+        gap: 10px;
+        /* Added gap between profile and toggle */
     }
 
     .profile-section {
@@ -253,7 +201,6 @@
         padding: 0;
         gap: 10px;
         flex: 1;
-        /* Takes available space */
     }
 
     .profile-pic {
@@ -273,9 +220,51 @@
         margin: 0;
     }
 
+    /* Show Toggle Button on Mobile */
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-left: auto;
+        /* This pushes it to the right */
+        padding: 8px;
+        /* Added some padding for better touch target */
+    }
+
+    /* Navigation Links - Mobile */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-end;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        padding: 10px 20px;
+        z-index: 1000;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+    }
+
+    .nav-links.mobile-open {
+        max-height: 500px;
+        opacity: 1;
+        overflow-y: auto;
+        pointer-events: auto;
+        padding: 15px 20px;
+    }
+
     .nav-link {
         width: 100%;
-        /* Take full width for better touch targets */
         margin: 0;
         align-self: flex-end;
         padding: clamp(8px, 1.5vw, 12px) clamp(10px, 2vw, 15px);
@@ -288,7 +277,6 @@
         display: none;
     }
 
-    /* Add hover/active state for mobile */
     .nav-link:hover,
     .nav-link:active {
         background-color: var(--primary-light);
