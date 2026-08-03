@@ -81,8 +81,9 @@ const Education = () => {
         {/* Timeline visualization */}
         <div className="timeline-container">
           <div className="timeline-line"></div>
-          
-          {educationData.map((item, index) => (
+
+          <div className="timeline-nodes">
+            {educationData.map((item, index) => (
             <div 
               key={item.id} 
               className={`timeline-node ${index === activeIndex ? 'active' : ''}`}
@@ -94,6 +95,8 @@ const Education = () => {
               <div className="node-tooltip">{item.institution}</div>
             </div>
           ))}
+          </div>
+          
         </div>
         
         {/* Main education details */}
