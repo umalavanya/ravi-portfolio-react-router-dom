@@ -366,7 +366,6 @@ const About = () => {
                 >
                   Next ▶
                 </button>
-
                 
               </div>
 

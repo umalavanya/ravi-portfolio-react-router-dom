@@ -43,7 +43,7 @@
     grid-column: 1 / -1;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
-    padding: clamp(60px, 2vw, 20px);
+    padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     overflow: visible;
 }
@@ -73,14 +73,13 @@
     min-width: 40px;
 }
 
-/* First and last nodes - adjusted to stay inside */
 .timeline-node:first-child {
-    left: clamp(100px, 10vw, 200px) !important;
+    left: clamp(30px, 6vw, 60px) !important;
     transform: translate(0, -50%) !important;
 }
 
 .timeline-node:last-child {
-    left: calc(100% - clamp(30px, 6vw, 50px)) !important;
+    left: calc(100% - clamp(30px, 6vw, 60px)) !important;
     transform: translate(-100%, -50%) !important;
 }
 
@@ -88,7 +87,6 @@
     transform: translate(-50%, -50%) scale(1.2);
 }
 
-/* First and last node hover */
 .timeline-node:first-child:hover {
     transform: translate(0, -50%) scale(1.2) !important;
 }
@@ -101,7 +99,6 @@
     transform: translate(-50%, -50%) scale(1.3);
 }
 
-/* First and last node active */
 .timeline-node:first-child.active {
     transform: translate(0, -50%) scale(1.3) !important;
 }
@@ -147,16 +144,15 @@
     border-radius: 4px;
 }
 
-/* First node year label */
 .timeline-node:first-child .timeline-year {
-    transform: translateX(0);
     left: 0;
+    transform: translateX(0);
 }
 
-/* Last node year label */
 .timeline-node:last-child .timeline-year {
-    transform: translateX(-100%);
-    left: 100%;
+    left: auto;
+    right: 0;
+    transform: translateX(0);
 }
 
 .node-tooltip {
@@ -176,16 +172,15 @@
     font-weight: 500;
 }
 
-/* First node tooltip */
 .timeline-node:first-child .node-tooltip {
-    transform: translateX(0);
     left: 0;
+    transform: translateX(0);
 }
 
-/* Last node tooltip */
 .timeline-node:last-child .node-tooltip {
-    transform: translateX(-100%);
-    left: 100%;
+    left: auto;
+    right: 0;
+    transform: translateX(0);
 }
 
 .timeline-node:hover .node-tooltip {
@@ -520,7 +515,6 @@
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -628,7 +622,7 @@
     }
 
     .timeline-node:first-child {
-        left: 30px !important;
+        left: (100% - 100px) !important;
     }
 
     .timeline-node:last-child {
@@ -638,6 +632,17 @@
     .timeline-year {
         top: 50px;
         font-size: 0.75rem;
+    }
+
+    .timeline-node:first-child .timeline-year {
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .timeline-node:last-child .timeline-year {
+        left: auto;
+        right: 0;
+        transform: translateX(0);
     }
 
     .node-tooltip {
