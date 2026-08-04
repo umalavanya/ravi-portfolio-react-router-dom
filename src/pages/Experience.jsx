@@ -167,7 +167,7 @@ const Experience = () => {
             <div className="timeline-container-exp">
               <div className="timeline-track">
                 <div className="timeline-progress" style={{ width: `${((activeIndex + 1) / experienceData.length) * 100}%` }}></div>
-                
+                <div className="timeline-nodes">
                 {experienceData.map((item, index) => (
                   <div 
                     key={item.id} 
@@ -191,6 +191,8 @@ const Experience = () => {
                     )}
                   </div>
                 ))}
+
+                </div>
               </div>
             </div>
           </div>

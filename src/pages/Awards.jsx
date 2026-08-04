@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import '../styles/Awards.css';
 
 const Awards = () => {
@@ -6,8 +6,10 @@ const Awards = () => {
   const [selectedAward, setSelectedAward] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('year');
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const awardsData = [
+  // Moved awardsData outside component or use useMemo to prevent unnecessary re-renders
+  const awardsData = useMemo(() => [
     {
       id: 1,
       name: 'INSPIRE Faculty Fellowship',
@@ -180,7 +182,16 @@ const Awards = () => {
       icon: '🏅',
       featured: true
     }
-  ];
+  ], []);
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const categories = [
     { id: 'all', name: 'All Awards', count: awardsData.length, icon: '🏆' },
@@ -239,13 +250,13 @@ const Awards = () => {
     const interval = setInterval(() => {
       const currentIndex = featuredAwards.findIndex(a => a.id === selectedAward?.id);
       const nextIndex = (currentIndex + 1) % featuredAwards.length;
-      if (currentIndex === -1 || window.innerWidth > 768) {
+      if (currentIndex === -1 || windowWidth > 768) {
         setSelectedAward(featuredAwards[nextIndex]);
       }
     }, 8000);
 
     return () => clearInterval(interval);
-  }, [selectedAward, awardsData]);
+  }, [selectedAward, awardsData, windowWidth]);
 
   return (
     <div className="content-section active awards-dashboard">
@@ -559,7 +570,7 @@ const Awards = () => {
       </div>
 
       {/* Award Detail Modal for Mobile */}
-      {selectedAward && window.innerWidth < 768 && (
+      {selectedAward && windowWidth < 768 && (
         <div className="award-modal">
           <div className="modal-content-awards">
             <button className="modal-close-awards" onClick={() => setSelectedAward(null)}>✕</button>

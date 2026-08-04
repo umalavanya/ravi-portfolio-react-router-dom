@@ -8,21 +8,23 @@ const Education = () => {
   const educationData = [
     {
       id: 0,
-      title: "Ph.D. in Experimental Condensed Matter Physics",
-      institution: "University of Hyderabad",
-      date: "2010 - 2018",
-      duration: "8 years",
-      description: "Thesis: Study of magnetic and transport properties of novel perovskite materials",
+      title: "B.Sc. in Mathematics, Physics, Chemistry",
+      node_title: "B.Sc.",
+      institution: "Kakatiya University",
+      date: "2004 - 2007",
+      duration: "3 years",
+      description: "Triple major program with focus on foundational sciences",
       details: [
-        "Published 8 research papers in international journals",
-        "Awarded Best Doctoral Thesis in Physical Sciences",
-        "Presented research at 5 international conferences"
+        "Graduated with First Class Honors",
+        "President of University Physics Club",
+        "Won inter-university science competition"
       ],
-      icon: "🎓"
+      icon: "🧪"
     },
     {
       id: 1,
       title: "M.Sc. in Physics",
+      node_title: "M.Sc.",
       institution: "Osmania University",
       date: "2007 - 2009",
       duration: "2 years",
@@ -36,18 +38,20 @@ const Education = () => {
     },
     {
       id: 2,
-      title: "B.Sc. in Mathematics, Physics, Chemistry",
-      institution: "Kakatiya University",
-      date: "2004 - 2007",
-      duration: "3 years",
-      description: "Triple major program with focus on foundational sciences",
+      title: "Ph.D. in Experimental Condensed Matter Physics",
+      node_title: "Ph.D.",
+      institution: "University of Hyderabad",
+      date: "2010 - 2018",
+      duration: "8 years",
+      description: "Thesis: Study of magnetic and transport properties of novel perovskite materials",
       details: [
-        "Graduated with First Class Honors",
-        "President of University Physics Club",
-        "Won inter-university science competition"
+        "Published 8 research papers in international journals",
+        "Awarded Best Doctoral Thesis in Physical Sciences",
+        "Presented research at 5 international conferences"
       ],
-      icon: "🧪"
+      icon: "🎓"
     }
+    
   ];
 
   // Handle window resize
@@ -91,7 +95,7 @@ const Education = () => {
               onClick={() => handleTimelineClick(index)}
             >
               <div className="timeline-icon">{item.icon}</div>
-              <div className="timeline-year">{item.date.split(' - ')[1]}</div>
+              <div className="timeline-year">{item.date.split(' - ')[1]}<br />{item.node_title}</div>
               <div className="node-tooltip">{item.institution}</div>
             </div>
           ))}
