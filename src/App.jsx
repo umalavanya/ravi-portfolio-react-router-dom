@@ -10,7 +10,8 @@ import Publications from './pages/Publications';
 import Footer from './pages/Footer';
 import Talks from './pages/Talks';
 import Skills from './pages/Skills';
-import Pictures from './pages/Pictures'
+import Pictures from './pages/Pictures' ;
+import Projects from './pages/Projects'
 
 function App() {
   return (
@@ -20,11 +21,11 @@ function App() {
         <MainContent>
           <Routes>
             
-            <Route path="/" element={<Navigate to='/about' replace/>} />
-            
+            <Route path="/" element={<Navigate to='/about' replace/>} />         
             <Route path="/about" element={<About />} />
             <Route path="/education" element={<Education />} />
             <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects/>}/>
             <Route path="/skills" element={<Skills />} />
             <Route path="/awards" element={<Awards />} />
             <Route path="/publications" element={<Publications />} />

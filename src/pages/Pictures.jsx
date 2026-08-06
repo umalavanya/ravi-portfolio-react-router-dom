@@ -453,32 +453,7 @@ const Pictures = () => {
         <h1 className="pictures-title">Journey Through Photos</h1>
         <p className="pictures-subtitle">Memories from Academic and Professional Life</p>
         
-        {!isSmallMobile && (
-          <div className="timeline-indicator">
-            <div className="timeline-track">
-              <div className="timeline-marker" style={{ left: '0%' }} data-year="2006">
-                <div className="marker-dot"></div>
-                <div className="marker-label">BSc</div>
-              </div>
-              <div className="timeline-marker" style={{ left: '25%' }} data-year="2009">
-                <div className="marker-dot"></div>
-                <div className="marker-label">MSc</div>
-              </div>
-              <div className="timeline-marker" style={{ left: '50%' }} data-year="2018">
-                <div className="marker-dot"></div>
-                <div className="marker-label">PhD</div>
-              </div>
-              <div className="timeline-marker" style={{ left: '75%' }} data-year="2022">
-                <div className="marker-dot"></div>
-                <div className="marker-label">Postdoc</div>
-              </div>
-              <div className="timeline-marker" style={{ left: '100%' }} data-year="Present">
-                <div className="marker-dot active"></div>
-                <div className="marker-label">Now</div>
-              </div>
-            </div>
-          </div>
-        )}
+
       </div>
 
       <div className="pictures-container">
@@ -552,7 +527,7 @@ const Pictures = () => {
                 <span className="highlight-icon">🌍</span>
                 <div className="highlight-content">
                   <strong>International Research</strong>
-                  <span>USA, Germany, Japan</span>
+                  <span>USA, India</span>
                 </div>
               </div>
               <div className="highlight-item">
