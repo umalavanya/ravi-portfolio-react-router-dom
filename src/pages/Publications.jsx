@@ -35,8 +35,8 @@ const Publications = () => {
       isEquallyContributed: true,
       impactFactor: 43.1,
       citations: 0,
-      link: "#",
-      doi: "",
+      link: "https://www.nature.com/articles/s41563-026-02611-9",
+      doi: "https://doi.org/10.1038/s41563-026-02611-9",
       abstract: "First author publication in Nature Materials on in-plane anomalous Hall effect in low-dimensional systems.",
       keywords: ["Anomalous Hall Effect", "Low-dimensional systems", "Spintronics", "Quantum materials"]
     },
