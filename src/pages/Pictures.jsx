@@ -38,7 +38,7 @@ const Pictures = () => {
       year: "2010-2018",
       location: "Hyderabad, India",
       tags: ["PhD", "Campus Life", "Academic Journey"],
-      image: "../../assets/allPics/29187023_10216499813276085_1847212919444471808_n.jpg",
+      image: "../../assets/uoh/uoh1.jpg",
       featured: true
     },
     {
