@@ -32,213 +32,150 @@ const Talks = () => {
   const talksData = [
     {
       id: 1,
-      title: "Tuning Dzyaloshinskii-Moriya Interactions in CoFeB Thin Films for Skyrmion Applications",
+      title: "Unidirectional Magnetoresistance and Anomalous Hall Effects in Magnetic Thin Films",
       type: "conference",
       category: "conference",
       subcategory: "international",
-      event: "International Conference on Magnetism (ICM 2022)",
-      venue: "San Francisco Convention Center",
-      location: "San Francisco, USA",
-      date: "July 15-20, 2022",
-      year: 2022,
+      event: "APS March Meeting 2025",
+      venue: "Los Angeles Convention Center",
+      location: "Los Angeles, USA",
+      date: "March 3-7, 2025",
+      year: 2025,
       presentationType: "Oral Presentation",
-      status: "presented",
-      abstract: "Presented experimental results on manipulating DMI in CoFeB thin films for potential skyrmion-based memory devices. Discussed thickness dependence and interface engineering strategies.",
+      status: "upcoming",
+      abstract: "Presenting experimental results on unidirectional magnetoresistance and anomalous Hall effects in magnetic thin film systems. Discussing the interplay between spin-orbit coupling and magnetic anisotropy.",
       slidesLink: "#",
       videoLink: "#",
       certificateLink: "#",
       featured: true,
-      attendees: "500+",
-      keywords: ["DMI", "Skyrmions", "CoFeB", "Spintronics", "Memory Devices"]
+      attendees: "800+",
+      keywords: ["Unidirectional Magnetoresistance", "Anomalous Hall Effect", "Spintronics", "Thin Films"]
     },
     {
       id: 2,
-      title: "Advanced Characterization of Magnetic Thin Films for Spintronic Applications",
-      type: "invited",
-      category: "invited",
+      title: "Unidirectional Magnetoresistance and Anomalous Hall Effects in Magnetic Heterostructures",
+      type: "conference",
+      category: "conference",
       subcategory: "international",
-      event: "Materials Research Society (MRS) Fall Meeting",
-      venue: "Hynes Convention Center",
-      location: "Boston, USA",
-      date: "November 27 - December 2, 2022",
-      year: 2022,
-      presentationType: "Invited Talk",
+      event: "APS March Meeting 2024",
+      venue: "Minneapolis Convention Center",
+      location: "Minneapolis, USA",
+      date: "March 4-8, 2024",
+      year: 2024,
+      presentationType: "Oral Presentation",
       status: "presented",
-      abstract: "Invited talk discussing advanced characterization techniques for magnetic thin films including SQUID, XPS, and magnetotransport measurements for spintronic device optimization.",
+      abstract: "Oral presentation on unidirectional magnetoresistance and anomalous Hall effects in magnetic heterostructures. Explored the role of interfacial spin-orbit coupling and its impact on transport properties.",
       slidesLink: "#",
       videoLink: "#",
       certificateLink: "#",
       featured: true,
-      attendees: "300+",
-      keywords: ["Characterization", "Thin Films", "SQUID", "XPS", "Spintronics"]
+      attendees: "700+",
+      keywords: ["Unidirectional Magnetoresistance", "Anomalous Hall Effect", "Heterostructures", "Spin-Orbit Coupling"]
     },
     {
       id: 3,
-      title: "Thickness-Dependent Magnetocaloric Effects in CrFe Thin Films",
+      title: "Unidirectional Magnetoresistance and Anomalous Hall Effects in Magnetic Multilayers",
       type: "conference",
       category: "conference",
       subcategory: "international",
-      event: "American Physical Society (APS) March Meeting",
-      venue: "Los Angeles Convention Center",
-      location: "Los Angeles, USA",
-      date: "March 5-10, 2018",
-      year: 2018,
-      presentationType: "Poster Presentation",
-      status: "presented",
-      abstract: "Presented research on optimizing magnetocaloric cooling through thickness control in CrFe thin films. Won Best Poster Award.",
-      slidesLink: "#",
-      videoLink: "#",
-      certificateLink: "#",
-      featured: true,
-      attendees: "1000+",
-      keywords: ["Magnetocaloric", "CrFe", "Thin Films", "Cooling", "APS"]
-    },
-    {
-      id: 4,
-      title: "2D Materials Integration for Next-Generation Spintronic Devices",
-      type: "invited",
-      category: "invited",
-      subcategory: "international",
-      event: "IEEE International Conference on Nanotechnology",
-      venue: "Marina Bay Sands",
-      location: "Singapore",
-      date: "July 31 - August 3, 2023",
-      year: 2023,
-      presentationType: "Keynote Address",
-      status: "upcoming",
-      abstract: "Keynote address on integrating 2D materials with conventional magnetic thin films for novel spintronic device architectures and improved performance.",
-      slidesLink: "#",
-      videoLink: "#",
-      certificateLink: "#",
-      featured: true,
-      attendees: "400+",
-      keywords: ["2D Materials", "Integration", "Spintronics", "Graphene", "TMDCs"]
-    },
-    {
-      id: 5,
-      title: "Department Seminar: Recent Advances in Magnetic Thin Film Research",
-      type: "seminar",
-      category: "seminar",
-      subcategory: "national",
-      event: "Physics Department Seminar Series",
-      venue: "Carnegie Mellon University",
-      location: "Pittsburgh, USA",
-      date: "October 12, 2023",
-      year: 2023,
-      presentationType: "Department Seminar",
-      status: "presented",
-      abstract: "Seminar presentation covering recent research progress in magnetic thin films including interfacial effects, anisotropy control, and device integration.",
-      slidesLink: "#",
-      videoLink: "#",
-      certificateLink: "#",
-      featured: false,
-      attendees: "50+",
-      keywords: ["Seminar", "Thin Films", "Research Update", "CMU"]
-    },
-    {
-      id: 6,
-      title: "Workshop on Advanced Nanofabrication Techniques",
-      type: "workshop",
-      category: "workshop",
-      subcategory: "national",
-      event: "National Nanofabrication Workshop",
-      venue: "Indian Institute of Science",
-      location: "Bangalore, India",
-      date: "January 20-22, 2021",
-      year: 2021,
-      presentationType: "Workshop Instructor",
-      status: "presented",
-      abstract: "Conducted hands-on workshop on advanced nanofabrication techniques including e-beam lithography, plasma etching, and 2D material transfer processes.",
-      slidesLink: "#",
-      videoLink: "#",
-      certificateLink: "#",
-      featured: false,
-      attendees: "30",
-      keywords: ["Workshop", "Nanofabrication", "E-beam Lithography", "Training"]
-    },
-    {
-      id: 7,
-      title: "Magnetic Phase Transitions in Disordered Systems",
-      type: "colloquium",
-      category: "colloquium",
-      subcategory: "national",
-      event: "Condensed Matter Physics Colloquium",
-      venue: "University of Hyderabad",
-      location: "Hyderabad, India",
-      date: "March 15, 2017",
-      year: 2017,
-      presentationType: "Colloquium Talk",
-      status: "presented",
-      abstract: "Colloquium talk discussing magnetic phase transitions in disordered CrFe alloy systems and reentrant magnetic behavior.",
-      slidesLink: "#",
-      videoLink: "#",
-      certificateLink: "#",
-      featured: false,
-      attendees: "80+",
-      keywords: ["Colloquium", "Phase Transitions", "Disorder", "CrFe Alloys"]
-    },
-    {
-      id: 8,
-      title: "International Workshop on Spintronic Materials",
-      type: "workshop",
-      category: "workshop",
-      subcategory: "international",
-      event: "International Spintronics Workshop",
-      venue: "Max Planck Institute",
-      location: "Stuttgart, Germany",
-      date: "September 10-12, 2019",
-      year: 2019,
-      presentationType: "Invited Speaker",
-      status: "presented",
-      abstract: "Invited speaker at international workshop discussing latest developments in spintronic materials and device fabrication.",
-      slidesLink: "#",
-      videoLink: "#",
-      certificateLink: "#",
-      featured: false,
-      attendees: "150+",
-      keywords: ["Spintronics", "Workshop", "International", "Materials"]
-    },
-    {
-      id: 9,
-      title: "Annual Conference of Materials Research Society of India",
-      type: "conference",
-      category: "conference",
-      subcategory: "national",
-      event: "MRSI Annual Conference",
-      venue: "IIT Madras",
-      location: "Chennai, India",
-      date: "December 18-20, 2019",
-      year: 2019,
+      event: "MMM & Intermag Conference 2024",
+      venue: "San Diego Convention Center",
+      location: "San Diego, USA",
+      date: "June 4-8, 2024",
+      year: 2024,
       presentationType: "Oral Presentation",
       status: "presented",
-      abstract: "Presented research on magnetic properties of thin films and received Young Scientist Award.",
-      slidesLink: "#",
-      videoLink: "#",
-      certificateLink: "#",
-      featured: false,
-      attendees: "200+",
-      keywords: ["MRSI", "Thin Films", "Award", "National Conference"]
-    },
-    {
-      id: 10,
-      title: "Future Perspectives in Quantum Materials Research",
-      type: "invited",
-      category: "invited",
-      subcategory: "international",
-      event: "International Conference on Quantum Materials",
-      venue: "Kyoto International Conference Center",
-      location: "Kyoto, Japan",
-      date: "November 5-8, 2024",
-      year: 2024,
-      presentationType: "Plenary Talk",
-      status: "upcoming",
-      abstract: "Plenary talk discussing future research directions in quantum materials with focus on topological insulators and quantum spin Hall systems.",
+      abstract: "Presented findings on unidirectional magnetoresistance and anomalous Hall effects in magnetic multilayer systems. Investigated the thickness dependence and interfacial effects on magnetotransport properties.",
       slidesLink: "#",
       videoLink: "#",
       certificateLink: "#",
       featured: true,
       attendees: "600+",
-      keywords: ["Quantum Materials", "Plenary", "Future Directions", "Topological Insulators"]
+      keywords: ["Unidirectional Magnetoresistance", "Anomalous Hall Effect", "Multilayers", "Interfacial Effects"]
+    },
+    {
+      id: 4,
+      title: "Advances in Spintronics: Magnetoresistance and Hall Effects in Magnetic Thin Films",
+      type: "invited",
+      category: "invited",
+      subcategory: "international",
+      event: "Symposium on Magnetism and Spintronics 2021",
+      venue: "Indian Institute of Science",
+      location: "Bangalore, India",
+      date: "December 15-17, 2021",
+      year: 2021,
+      presentationType: "Invited Talk",
+      status: "presented",
+      abstract: "Invited talk covering recent advances in spintronics with focus on magnetoresistance and Hall effects in magnetic thin films. Discussed potential applications in next-generation memory and logic devices.",
+      slidesLink: "#",
+      videoLink: "#",
+      certificateLink: "#",
+      featured: true,
+      attendees: "200+",
+      keywords: ["Spintronics", "Magnetoresistance", "Hall Effects", "Memory Devices"]
+    },
+    {
+      id: 5,
+      title: "Magnetic Properties and Transport Phenomena in CrFe Alloy Thin Films",
+      type: "conference",
+      category: "conference",
+      subcategory: "international",
+      event: "International Conference on Magnetism and Magnetic Materials",
+      venue: "Hilton San Francisco",
+      location: "San Francisco, USA",
+      date: "November 11-15, 2019",
+      year: 2019,
+      presentationType: "Poster Presentation",
+      status: "presented",
+      abstract: "Poster presentation on magnetic properties and transport phenomena in CrFe alloy thin films. Won Best Poster Award for this work.",
+      slidesLink: "#",
+      videoLink: "#",
+      certificateLink: "#",
+      featured: true,
+      attendees: "500+",
+      keywords: ["CrFe Alloy", "Thin Films", "Transport Properties", "Magnetic Properties"]
+    },
+    {
+      id: 6,
+      title: "Structural and Magnetic Characterization of Transition Metal Thin Films",
+      type: "conference",
+      category: "conference",
+      subcategory: "national",
+      event: "DAE Solid State Physics Symposium",
+      venue: "BARC Convention Centre",
+      location: "Mumbai, India",
+      date: "December 18-22, 2018",
+      year: 2018,
+      presentationType: "Oral Presentation",
+      status: "presented",
+      abstract: "Presented structural and magnetic characterization studies of transition metal thin films. Discussed XRD, XPS, and SQUID measurements and their correlation with magnetic properties.",
+      slidesLink: "#",
+      videoLink: "#",
+      certificateLink: "#",
+      featured: false,
+      attendees: "400+",
+      keywords: ["Thin Films", "Characterization", "XRD", "XPS", "SQUID"]
+    },
+    {
+      id: 7,
+      title: "Frontiers in Magnetic Thin Film Research: From Fundamentals to Applications",
+      type: "invited",
+      category: "invited",
+      subcategory: "international",
+      event: "Frontiers in Physics Conference",
+      venue: "Tata Institute of Fundamental Research",
+      location: "Mumbai, India",
+      date: "January 10-12, 2020",
+      year: 2020,
+      presentationType: "Invited Speaker",
+      status: "presented",
+      abstract: "Invited talk covering frontiers in magnetic thin film research, from fundamental physics to device applications. Highlighted recent breakthroughs and future directions.",
+      slidesLink: "#",
+      videoLink: "#",
+      certificateLink: "#",
+      featured: false,
+      attendees: "300+",
+      keywords: ["Magnetic Thin Films", "Applications", "Frontiers", "Spintronics"]
     }
   ];
 
@@ -289,7 +226,7 @@ const Talks = () => {
   return (
     <div className="content-section active talks-dashboard">
       <div className="talks-header">
-        <h1 className="talks-title">Talks & Presentations</h1>
+        <h1 className="talks-title">INVITED TALKS & PRESENTATIONS</h1>
         <p className="talks-subtitle">Sharing Research Insights Globally</p>
         
         <div className="search-controls-talks">
@@ -351,7 +288,7 @@ const Talks = () => {
               </div>
               
               <div className="stat-talks countries">
-                <div className="stat-value-talks">6+</div>
+                <div className="stat-value-talks">4+</div>
                 <div className="stat-label-talks">Countries</div>
               </div>
             </div>
@@ -665,6 +602,50 @@ const Talks = () => {
                   ))}
                 </div>
               </div>
+
+              {/* Best Poster Award Section */}
+              <div className="featured-talks-section" style={{ borderColor: '#27ae60', borderLeft: '4px solid #27ae60' }}>
+                <h3>
+                  <span className="featured-icon-talks">🏅</span>
+                  Best Poster Award
+                </h3>
+                
+                <div className="featured-talks-grid">
+                  {talksData.filter(talk => talk.abstract.includes('Best Poster Award')).map(talk => (
+                    <div 
+                      key={talk.id}
+                      className="featured-talk-card"
+                      onClick={() => handleTalkClick(talk)}
+                      style={{ borderColor: '#27ae60' }}
+                    >
+                      <div 
+                        className="featured-card-header"
+                        style={{ backgroundColor: '#27ae60' }}
+                      >
+                        <div className="featured-type">🏅 Best Poster Award</div>
+                        <div className="featured-year">{talk.year}</div>
+                      </div>
+                      
+                      <div className="featured-card-content">
+                        <h4>{talk.title}</h4>
+                        <div className="featured-event">{talk.event}</div>
+                        <div className="featured-location">{talk.location}</div>
+                        
+                        <div className="featured-stats">
+                          <span className="stat">
+                            <span className="stat-icon">👥</span>
+                            {talk.attendees}
+                          </span>
+                          <span className="stat">
+                            <span className="stat-icon">📅</span>
+                            {talk.date.split(' ')[0]}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </>
           ) : (
             /* Timeline View */
@@ -713,12 +694,8 @@ const Talks = () => {
                   <span>Invited</span>
                 </div>
                 <div className="key-item">
-                  <div className="key-color seminar"></div>
-                  <span>Seminar</span>
-                </div>
-                <div className="key-item">
-                  <div className="key-color workshop"></div>
-                  <span>Workshop</span>
+                  <div className="key-color" style={{ backgroundColor: '#27ae60' }}></div>
+                  <span>Best Poster Award</span>
                 </div>
               </div>
             </div>
@@ -732,16 +709,16 @@ const Talks = () => {
                 Global Reach
               </h3>
               <p>
-                Presentations delivered in 6 countries across 4 continents, 
+                Presentations delivered in 4 countries across 3 continents, 
                 reaching audiences of 3000+ researchers worldwide.
               </p>
               <div className="reach-stats">
                 <div className="reach-stat">
-                  <div className="reach-value">6</div>
+                  <div className="reach-value">4</div>
                   <div className="reach-label">Countries</div>
                 </div>
                 <div className="reach-stat">
-                  <div className="reach-value">4</div>
+                  <div className="reach-value">3</div>
                   <div className="reach-label">Continents</div>
                 </div>
                 <div className="reach-stat">
@@ -757,22 +734,26 @@ const Talks = () => {
                 Recognition
               </h3>
               <p>
-                Featured speaker at 5+ international conferences, 
+                Featured speaker at international conferences, 
                 awarded Best Poster Presentation, and invited for 
                 keynote addresses at prestigious events.
               </p>
               <div className="recognition-list">
                 <div className="recognition-item">
                   <span className="recognition-icon">⭐</span>
-                  <span>Best Poster Award (APS 2018)</span>
+                  <span>Invited Talk: Symposium on Magnetism and Spintronics (2021)</span>
+                </div>
+                <div className="recognition-item">
+                  <span className="recognition-icon">🏅</span>
+                  <span>Best Poster Award - International Conference on Magnetism and Magnetic Materials</span>
                 </div>
                 <div className="recognition-item">
                   <span className="recognition-icon">🎤</span>
-                  <span>5+ Keynote Invitations</span>
+                  <span>Oral Presentations at APS March Meeting 2024 & 2025</span>
                 </div>
                 <div className="recognition-item">
                   <span className="recognition-icon">🏆</span>
-                  <span>Featured Speaker at ICM</span>
+                  <span>Oral Presentation at MMM & Intermag Conference 2024</span>
                 </div>
               </div>
             </div>
