@@ -563,8 +563,8 @@ const Publications = () => {
 
             <div className="year-distribution">
               <h4>Publications by Year</h4>
-              <div >
-              <div className="year-bars">
+               
+              <div className="year-bars" styles={{padding:"1.5em"}}>
                 {stats.years.map(year => {
                   const count = allPublications.filter(p => p.year === year).length;
                   const maxCount = Math.max(...stats.years.map(y => allPublications.filter(p => p.year === y).length));
@@ -581,7 +581,6 @@ const Publications = () => {
                     </div>
                   );
                 })}
-              </div>
               </div>
             </div>
           </div>
