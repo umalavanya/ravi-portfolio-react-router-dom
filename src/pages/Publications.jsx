@@ -563,6 +563,7 @@ const Publications = () => {
 
             <div className="year-distribution">
               <h4>Publications by Year</h4>
+              <div >
               <div className="year-bars">
                 {stats.years.map(year => {
                   const count = allPublications.filter(p => p.year === year).length;
@@ -580,6 +581,7 @@ const Publications = () => {
                     </div>
                   );
                 })}
+              </div>
               </div>
             </div>
           </div>

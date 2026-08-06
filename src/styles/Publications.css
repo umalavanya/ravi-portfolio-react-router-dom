@@ -189,6 +189,16 @@
     border-left-color: #d88c6a;
 }
 
+.stat-card-pub.first {
+    border-left-color: #1976d2;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+}
+
+.stat-card-pub.coauthor {
+    border-left-color: #7b1fa2;
+    background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+}
+
 .stat-value-pub {
     font-size: clamp(1.3rem, 2.5vw, 1.8rem);
     font-weight: 700;
@@ -468,6 +478,17 @@
     border-top-color: #a54f2e;
 }
 
+.publication-grid-card.under-review {
+    border-top-color: #ff9800;
+    border: 1px solid #ff9800;
+}
+
+.publication-grid-card.ongoing {
+    border-top-color: #9c27b0;
+    border: 1px solid #9c27b0;
+    opacity: 0.85;
+}
+
 .grid-card-badges {
     display: flex;
     justify-content: space-between;
@@ -489,6 +510,16 @@
 .grid-type-badge.conference {
     background: rgba(165, 79, 46, 0.1);
     color: #a54f2e;
+}
+
+.grid-type-badge.under-review {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.grid-type-badge.ongoing {
+    background: #f3e5f5;
+    color: #7b1fa2;
 }
 
 .grid-year-badge {
@@ -581,6 +612,17 @@
     border-left-color: #a54f2e;
 }
 
+.publication-card.under-review {
+    border-left-color: #ff9800;
+    border-left-width: 6px;
+}
+
+.publication-card.ongoing {
+    border-left-color: #9c27b0;
+    border-left-width: 6px;
+    opacity: 0.85;
+}
+
 .pub-card-header {
     display: flex;
     flex-wrap: wrap;
@@ -607,6 +649,18 @@
     background: rgba(165, 79, 46, 0.1);
     color: #a54f2e;
     border: 1px solid rgba(165, 79, 46, 0.2);
+}
+
+.pub-type-badge.under-review {
+    background: #fff3e0;
+    color: #e65100;
+    border: 1px solid #ffcc80;
+}
+
+.pub-type-badge.ongoing {
+    background: #f3e5f5;
+    color: #7b1fa2;
+    border: 1px solid #ce93d8;
 }
 
 .pub-year-badge {
@@ -650,6 +704,41 @@
     color: #8b4513;
 }
 
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.status-badge.first {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.status-badge.review {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.status-badge.ongoing {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.status-badge.equal {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.equal-contrib {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
 .pub-content {
     flex: 1;
 }
@@ -674,6 +763,21 @@
     font-size: clamp(0.8rem, 1.1vw, 1rem);
     margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
     line-height: 1.5;
+}
+
+.pub-arxiv {
+    margin: 8px 0;
+    font-size: 0.85rem;
+}
+
+.pub-arxiv a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pub-arxiv a:hover {
+    text-decoration: underline;
 }
 
 .pub-actions {
@@ -956,6 +1060,42 @@
     font-weight: 500;
 }
 
+/* Research Status Grid */
+.research-status-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.status-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: #f8f1ec;
+    border-radius: 8px;
+}
+
+.status-count {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #bd5d38;
+}
+
+.status-label {
+    font-size: 0.8rem;
+    color: #a67c52;
+    margin-top: 4px;
+}
+
+.status-note {
+    font-size: 0.85rem;
+    color: #a67c52;
+    margin-top: 8px;
+    font-style: italic;
+}
+
 /* Top Journals */
 .top-journals {
     margin-top: 3rem;
@@ -1000,6 +1140,17 @@
 .journal-item:hover {
     background: #f0e6df;
     transform: translateX(5px);
+}
+
+.journal-item.highlight {
+    background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+    border-left: 4px solid #1976d2;
+}
+
+.journal-item .journal-impact {
+    font-size: 0.75rem;
+    color: #1976d2;
+    font-weight: 600;
 }
 
 .journal-name {
@@ -1109,6 +1260,16 @@
 .modal-type-badge.conference {
     background: rgba(165, 79, 46, 0.1);
     color: #a54f2e;
+}
+
+.modal-type-badge.under-review {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.modal-type-badge.ongoing {
+    background: #f3e5f5;
+    color: #7b1fa2;
 }
 
 .modal-year {
@@ -1326,6 +1487,10 @@
     .publication-card {
         padding: 1.25rem;
     }
+
+    .research-status-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 576px) {
@@ -1518,6 +1683,16 @@
 
     .modal-keyword {
         font-size: 0.75rem;
+    }
+
+    .status-badge {
+        font-size: 0.6rem;
+        padding: 1px 8px;
+    }
+
+    .research-status-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
 }
 
