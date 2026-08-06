@@ -316,6 +316,8 @@ const Publications = () => {
       type: "under-review",
       category: "under-review",
       isFirstAuthor: false,
+      link: "https://arxiv.org/abs/2601.11504",
+      arxiv: "https://arxiv.org/abs/2601.11504",
       referenceNumber: "NCOMMS-26-004797",
       abstract: "Manuscript under review on visualization of tunable electronic structure of monolayer TaIrTe4.",
       keywords: ["TaIrTe4", "Monolayer", "Electronic structure", "2D materials", "ARPES"]
