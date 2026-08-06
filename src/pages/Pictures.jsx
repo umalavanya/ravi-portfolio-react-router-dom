@@ -33,6 +33,7 @@ const Pictures = () => {
     {
       id: 1,
       title: "University of Hyderabad Campus",
+      small_title: "Uoh Campus",
       description: "Beautiful campus where I completed my PhD in Experimental Condensed Matter Physics",
       category: "universities",
       year: "2010-2018",
@@ -44,6 +45,7 @@ const Pictures = () => {
     {
       id: 2,
       title: "University of Hyderabad Campus",
+      small_title: "Uoh Campus",
       description: "Beautiful campus where I completed my PhD in Experimental Condensed Matter Physics",
       category: "universities",
       year: "2010-2018",
@@ -55,6 +57,7 @@ const Pictures = () => {
     {
       id: 3,
       title: "University of Hyderabad Campus",
+      small_title: "Uoh Campus",
       description: "Beautiful campus where I completed my PhD in Experimental Condensed Matter Physics",
       category: "universities",
       year: "2010-2018",
@@ -558,7 +561,7 @@ const Pictures = () => {
                     style={{ backgroundImage: `url(${photo.image})` }}
                   ></div>
                   <div className="preview-info">
-                    <div className="preview-title">{isSmallMobile ? photo.title.substring(0, 15) + '...' : photo.title}</div>
+                    <div className="preview-title">{isSmallMobile ? photo.title.substring(0, 15) + '...' : photo.small_title}</div>
                     <div className="preview-year">{photo.year}</div>
                   </div>
                 </div>
