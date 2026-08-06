@@ -38,7 +38,7 @@ const Pictures = () => {
       year: "2010-2018",
       location: "Hyderabad, India",
       tags: ["PhD", "Campus Life", "Academic Journey"],
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&auto=format&fit=crop",
+      image: "../../assets/allPics/29187023_10216499813276085_1847212919444471808_n.jpg",
       featured: true
     },
     {
@@ -49,7 +49,7 @@ const Pictures = () => {
       year: "2015",
       location: "School of Physics, UoH",
       tags: ["Mentor", "PhD Supervisor", "Research Guidance"],
-      image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&auto=format&fit=crop",
+      image: "../../assets/allPics/42901606_2244631432449473_5285904027433828352_n.jpg",
       featured: true
     },
     {
