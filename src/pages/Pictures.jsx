@@ -20,10 +20,6 @@ const Pictures = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-
-
-
-
   // Calculate category counts
   categories.forEach(cat => {
     if (cat.id === 'all') {

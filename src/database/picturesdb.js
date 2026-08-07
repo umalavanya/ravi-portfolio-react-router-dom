@@ -1,3 +1,6 @@
+  const path = "../../assets/galery/" ;
+  
+  
   export const categories = [
     { id: 'all', name: 'All Memories', icon: '📸', count: 0 },
     { id: 'universities', name: 'Universities', icon: '🏛️', count: 0 },
@@ -18,7 +21,7 @@
       year: "2010-2018",
       location: "Hyderabad, India",
       tags: ["PhD", "Campus Life", "Academic Journey"],
-      image: "../../assets/galery/uoh/uoh1.jpg",
+      image: `${path}uoh/uoh1.jpg`,
       featured: true
     },
     {
