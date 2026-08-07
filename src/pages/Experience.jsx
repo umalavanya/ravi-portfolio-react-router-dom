@@ -93,7 +93,10 @@ const Experience = () => {
         {(viewMode === 'timeline' || viewMode === 'focus') && (
           <div className="timeline-experience-section">
             <div className="timeline-container-exp">
+
+              <div>
               <div className="timeline-track">
+                
                 <div className="timeline-progress" style={{ width: `${((activeIndex + 1) / experienceData.length) * 100}%` }}></div>
                 <div className="timeline-nodes">
                 {experienceData.map((item, index) => (
@@ -106,7 +109,7 @@ const Experience = () => {
                   >
                     <div className="milestone-marker">
                       <div className="milestone-icon">{item.icon}</div>
-                      <div className="milestone-dot"></div>
+                      
                     </div>
                     {!isMobile && (
                       <>
@@ -121,6 +124,7 @@ const Experience = () => {
                 ))}
 
                 </div>
+              </div>
               </div>
             </div>
           </div>
