@@ -671,7 +671,7 @@ const Pictures = () => {
                 ))}
               </div>
 
-              {/* Journey Map - Hide on small mobile */}
+              {/* Journey Map - Hide on small mobile
               {!isSmallMobile && (
                 <div className="journey-map">
                   <h3>
@@ -731,7 +731,7 @@ const Pictures = () => {
                     </div>
                   </div>
                 </div>
-              )}
+              )} */}
             </>
           )}
         </div>
