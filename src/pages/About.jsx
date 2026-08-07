@@ -61,6 +61,38 @@ const About = () => {
     }
   ];
 
+// Function to download CV in DOCX format
+const downloadCV_DOCX = () => {
+  // Using relative path from the public folder
+  const cvUrl = '/cv/ravikumar_resume.docx'; // Files should be in public/cv/ folder
+  const link = document.createElement('a');
+  link.href = cvUrl;
+  link.download = 'ravikumar_resume.docx';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+// Function to download CV in PDF format
+const downloadCV_PDF = () => {
+  // Using relative path from the public folder
+  const cvUrl = '/cv/ravikumar_resume.pdf'; // Files should be in public/cv/ folder
+  const link = document.createElement('a');
+  link.href = cvUrl;
+  link.download = 'ravikumar_resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+  // Social media links
+  const socialLinks = {
+    linkedin: 'https://www.linkedin.com/in/ravi-kumar-bandapelli-6265231b7/', // Replace with your LinkedIn URL
+    googleScholar: 'https://scholar.google.com/citations?user=ybqQ9PkAAAAJ&hl=en', // Replace with your Google Scholar URL
+    researchGate: 'https://www.researchgate.net/profile/Ravi-Kumar-Bandapelli', // Replace with your ResearchGate URL
+    orcid: 'https://orcid.org/0000-0001-5112-081X' // Replace with your ORCID
+  };
+
   return (
     <div className="content-section active about-dashboard">
       {/* Hero Section */}
@@ -182,6 +214,100 @@ const About = () => {
               <span className="expertise-tag-sidebar">Nanofabrication</span>
               <span className="expertise-tag-sidebar">Magnetism</span>
               <span className="expertise-tag-sidebar">Characterization</span>
+            </div>
+          </div>
+
+          {/* Download CV Section */}
+          <div className="cv-download-section">
+            <h3>
+              <span className="cv-icon">📄</span>
+              Download CV
+            </h3>
+            <div className="cv-download-buttons">
+              <button 
+                className="cv-btn pdf-btn"
+                onClick={downloadCV_PDF}
+                aria-label="Download CV as PDF"
+              >
+                <span className="cv-btn-icon">📕</span>
+                PDF
+                <span className="cv-btn-size">(2.4 MB)</span>
+              </button>
+              <button 
+                className="cv-btn docx-btn"
+                onClick={downloadCV_DOCX}
+                aria-label="Download CV as DOCX"
+              >
+                <span className="cv-btn-icon">📘</span>
+                DOCX
+                <span className="cv-btn-size">(1.8 MB)</span>
+              </button>
+            </div>
+            <p className="cv-note">Last updated: August 2026</p>
+          </div>
+
+          {/* Social Media Section */}
+          <div className="social-section">
+            <h3>
+              <span className="social-icon">🌐</span>
+              Connect With Me
+            </h3>
+            <div className="social-icons-about">
+              <a 
+                href={socialLinks.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon-about linkedin"
+                aria-label="LinkedIn"
+              >
+                <svg className="social-svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a 
+                href={socialLinks.googleScholar} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon-about scholar"
+                aria-label="Google Scholar"
+              >
+                <svg className="social-svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5 12 0z"/>
+                </svg>
+              </a>
+              <a 
+                href={socialLinks.researchGate} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon-about researchgate"
+                aria-label="ResearchGate"
+              >
+                <svg className="social-svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 0v24h24V0H0zm12 3.5c2.9 0 5.25 2.35 5.25 5.25S14.9 14 12 14 6.75 11.65 6.75 8.75 9.1 3.5 12 3.5zM3.5 12c0-1.2.35-2.3.95-3.25.6.95.95 2.05.95 3.25s-.35 2.3-.95 3.25C3.85 14.3 3.5 13.2 3.5 12zm17 0c0 1.2-.35 2.3-.95 3.25-.6-.95-.95-2.05-.95-3.25s.35-2.3.95-3.25c.6.95.95 2.05.95 3.25zM12 20.5c-1.2 0-2.3-.35-3.25-.95.95-.6 2.05-.95 3.25-.95s2.3.35 3.25.95c-.95.6-2.05.95-3.25.95z"/>
+                </svg>
+              </a>
+              <a 
+                href={socialLinks.orcid} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon-about orcid"
+                aria-label="ORCID"
+              >
+                <svg className="social-svg" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Green circle background */}
+                  <circle cx="128" cy="128" r="128" fill="#A6CE39"/>
+                  {/* White "iD" text */}
+                  <g fill="#FFFFFF">
+                  {/* "i" - dot and stem */}
+                  <path d="M86.3 186.2H70.9V79.1h15.4v48.4V186.2z"/>
+                  {/* "D" - curved shape */}
+                  <path d="M108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zM124.3 172.4h24.5c34.9 0 42.9-26.5 42.9-39.7 0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/>
+                  {/* Small "i" dot above */}
+                  <circle cx="78.6" cy="56.8" r="10.1"/>
+  </g>
+</svg>
+              </a>
+
             </div>
           </div>
 

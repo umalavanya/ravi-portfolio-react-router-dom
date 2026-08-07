@@ -1201,3 +1201,302 @@
         height: 35px;
     }
 }
+
+
+/* CV Download Section Styles */
+.cv-download-section {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(189, 93, 56, 0.08);
+    border-top: 4px solid #2c3e50;
+    margin-top: 0;
+}
+
+.cv-download-section h3 {
+    color: #8b4513;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cv-icon {
+    font-size: 1.2rem;
+}
+
+.cv-download-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cv-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.cv-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.cv-btn:hover::before {
+    left: 100%;
+}
+
+.cv-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cv-btn:active {
+    transform: translateY(0);
+}
+
+.pdf-btn {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.pdf-btn:hover {
+    background: linear-gradient(135deg, #ff6b5b, #e74c3c);
+}
+
+.docx-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.docx-btn:hover {
+    background: linear-gradient(135deg, #5dade2, #3498db);
+}
+
+.cv-btn-icon {
+    font-size: 1.3rem;
+}
+
+.cv-btn-size {
+    font-size: 0.7rem;
+    opacity: 0.9;
+    font-weight: 400;
+    margin-left: 0.25rem;
+}
+
+.cv-note {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: #a67c52;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Social Media Section */
+.social-section {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(189, 93, 56, 0.08);
+    border-top: 4px solid #bd5d38;
+}
+
+.social-section h3 {
+    color: #8b4513;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.social-icon {
+    font-size: 1.2rem;
+}
+
+.social-icons-about {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icon-about {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background: #f8f1ec;
+    color: #8b4513;
+    position: relative;
+}
+
+.social-svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+/* Individual social media colors on hover */
+.social-icon-about.linkedin:hover {
+    background: #0077b5;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 119, 181, 0.3);
+}
+
+.social-icon-about.linkedin:hover .social-svg {
+    fill: white;
+}
+
+.social-icon-about.scholar:hover {
+    background: #4285f4;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(66, 133, 244, 0.3);
+}
+
+.social-icon-about.scholar:hover .social-svg {
+    fill: white;
+}
+
+.social-icon-about.researchgate:hover {
+    background: #00ccbb;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 204, 187, 0.3);
+}
+
+.social-icon-about.researchgate:hover .social-svg {
+    fill: white;
+}
+
+.social-icon-about.orcid:hover {
+    background: #a6ce39;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(166, 206, 57, 0.3);
+}
+
+.social-icon-about.orcid:hover .social-svg {
+    fill: white;
+}
+
+.social-icon-about.facebook:hover {
+    background: #1877f2;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(24, 119, 242, 0.3);
+}
+
+.social-icon-about.facebook:hover .social-svg {
+    fill: white;
+}
+
+/* Tooltip for social icons */
+.social-icon-about::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.social-icon-about:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -35px;
+}
+
+/* Responsive styles for new sections */
+@media (max-width: 1200px) {
+    .cv-download-buttons {
+        flex-direction: column;
+    }
+
+    .cv-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .social-icons-about {
+        gap: 0.75rem;
+    }
+
+    .social-icon-about {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cv-download-section,
+    .social-section {
+        padding: 1rem;
+    }
+
+    .cv-btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+        min-width: 100px;
+    }
+
+    .social-icon-about {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .social-icon-about {
+        width: 38px;
+        height: 38px;
+    }
+
+    .social-svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .cv-btn-size {
+        display: none;
+    }
+}
