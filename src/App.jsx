@@ -11,7 +11,8 @@ import Footer from './pages/Footer';
 import Talks from './pages/Talks';
 import Skills from './pages/Skills';
 import Pictures from './pages/Pictures' ;
-import Projects from './pages/Projects'
+import Projects from './pages/Projects' ;
+import Resources from './pages/Resources';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/awards" element={<Awards />} />
             <Route path="/publications" element={<Publications />} />
             <Route path="/talks" element={<Talks />} />
+            <Route path="/resources" element={<Resources />} />
             <Route path="/pictures" element={<Pictures />} />
           </Routes>
         </MainContent>
