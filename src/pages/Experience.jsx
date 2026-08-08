@@ -93,8 +93,7 @@ const Experience = () => {
         {(viewMode === 'timeline' || viewMode === 'focus') && (
           <div className="timeline-experience-section">
             <div className="timeline-container-exp">
-
-              <div>
+              
               <div className="timeline-track">
                 
                 <div className="timeline-progress" style={{ width: `${((activeIndex + 1) / experienceData.length) * 100}%` }}></div>
@@ -124,7 +123,6 @@ const Experience = () => {
                 ))}
 
                 </div>
-              </div>
               </div>
             </div>
           </div>
